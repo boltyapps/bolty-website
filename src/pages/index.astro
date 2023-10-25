@@ -1,0 +1,286 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import PostHeader from "../components/PostHeader.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+);
+
+const featuredPosts = posts.filter(post => post.data.isFeatured)
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">BOLTY</a>
+            <a class="btn btn-dark" href="#service-bookings">Book Services</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 8rem; margin-bottom: 8rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
+        <h3 class="mt-3 display-6">We Make Your Car Services<br>Easy & Hassle-Free.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 text-center mb-4">
+        <h2>Reasons to choose <strong>Bolty</strong></h2>
+      </div>
+
+      <div class="col-sm-12 col-md-3 mb-4">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <img src="img/estimation.png" alt="estimation" width="64" class="mb-4">
+            <h5 class="card-title fw-bold">Service Estimations</h5>
+            <p class="card-text">You get all the service estimations before the service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mb-4">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <img src="img/schedule.png" alt="schedule" width="64" class="mb-4">
+            <h5 class="card-title fw-bold">Time Slots</h5>
+            <p class="card-text">Choose your own time and date for the services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mb-4">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <img src="img/location.png" alt="location" width="64" class="mb-4">
+            <h5 class="card-title fw-bold">PickUp & Drop</h5>
+            <p class="card-text">Free pickup and drop is arranged as per the request.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 mb-4">
+        <div class="card shadow">
+          <div class="card-body text-center">
+            <img src="img/notification.png" alt="notification" width="64" class="mb-4">
+            <h5 class="card-title fw-bold">Timely Updates</h5>
+            <p class="card-text">We will give all the service updates happening in garage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 text-center my-5">
+        <img src="/img/approved.png" alt="approved" width="64">
+        <h4 class="mt-3">Bolty engineer's verified & approved services!</h4>
+        <p class="badge bg-danger">Coming Soon</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5" id="content">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="mt-5 p-5 text-white" style="background: rgb(255,92,0);
+        background: linear-gradient(238deg, rgba(255,92,0,1) 0%, rgba(129,0,166,1) 100%);">
+          <!-- <h5 class="mb-0 mt-4">We want you to have a</h5> -->
+          <h1>Get convenient, transparent <br>and hassle-free service experience <br> with BOLTY.</h1>
+
+          <!-- <h5 class="mt-5 mb-0">That's why we have started</h5> -->
+          <!-- <h1 class="fw-bold">BOLTY</h1> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 text-center">
+        <img src="img/serviceprovider.png" alt="service provider" width="128">
+        <h5  class="mt-3 mb-0 display-6">Your car is in safe hands!</h5>
+        <h4>We handpick our service partners who have 10+ years of experience.</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5" id="service-bookings">
+    <div class="row border border-2 rounded p-5 bg-white">
+      <div class="col-12 text-center mb-3">
+        <h2 class="mb-0">Book Your Service</h2>
+        <p>You can select all the services you need.</p>
+      </div>
+
+      <form name="interest" method="POST" data-netlify="true" action="/success" class="row">
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div class="form-check">
+              <input class="form-check-input border border-primary border-2" type="checkbox" value="Periodic Maintenance" id="periodicMaintenance" name="serviceItem">
+              <label class="form-check-label" for="periodicMaintenance">
+                Periodic Maintenance
+              </label>
+            </div>
+
+            <div class="accordion mt-3" id="periodicMaintenanceAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flushCollapsePeriodicMaintenance" aria-expanded="false" aria-controls="flushCollapsePeriodicMaintenance">
+                    Service Details
+                  </button>
+                </h2>
+                <div id="flushCollapsePeriodicMaintenance" class="accordion-collapse collapse"
+                  data-bs-parent="#periodicMaintenanceAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Car Wash & Interior Cleaning</li>
+                      <li>Engine Oil Change</li>
+                      <li>Air Filter Change</li>
+                      <li>Coolant Change</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div class="form-check">
+              <input class="form-check-input border border-primary border-2" type="checkbox" value="Denting & Painting" id="dentingAndPainting" name="serviceItem">
+              <label class="form-check-label" for="dentingAndPainting">
+                Denting & Painting
+              </label>
+            </div>
+
+            <div class="accordion mt-3" id="dentingAndPaintingAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flushCollapseDentingAndPainting" aria-expanded="false" aria-controls="flushCollapseDentingAndPainting">
+                    Service Details
+                  </button>
+                </h2>
+                <div id="flushCollapseDentingAndPainting" class="accordion-collapse collapse"
+                  data-bs-parent="#dentingAndPaintingAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Denting</li>
+                      <li>Painting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div class="form-check">
+              <input class="form-check-input border border-primary border-2" type="checkbox" value="Wheel Care" id="wheelCare" name="serviceItem">
+              <label class="form-check-label" for="wheelCare">
+                Wheel Care
+              </label>
+            </div>
+
+            <div class="accordion mt-3" id="wheelCareAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flushCollapseWheelCare" aria-expanded="false" aria-controls="flushCollapseWheelCare">
+                    Service Details
+                  </button>
+                </h2>
+                <div id="flushCollapseWheelCare" class="accordion-collapse collapse" data-bs-parent="#wheelCareAccordion">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Wheel Alignment</li>
+                      <li>Wheel Balancing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div>
+              <label for="otherRepair" class="form-label">Other Repairs/Services</label>
+              <textarea class="form-control border border-primary border-2" id="otherRepair" rows="2" placeholder="Write here" name="repairs-or-services"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div>
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
+          <div class="card card-body shadow">
+            <div>
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" id="phone" name="phone" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-4 text-center">
+          <button type="submit" class="btn btn-dark">Book Services Now</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mb-4 d-flex align-items-center">
+        <div class="shadow bg-white p-4 w-100">
+          <h3 class="fw-bold mb-0">Contact</h3>
+          <hr>
+          <h4>+91 9963017273</h4>
+          <div class="mt-3 d-flex justify-content-between">
+            <a href="tel:+919963017273">Call Now</a>
+            <a href="wa.me/919963017273">Chat On WhatsApp</a>
+          </div>
+          <p class="mt-5">Operating from CIE, IIITH, Gachibowli, Hyderabad.</p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 mb-4 d-flex align-items-center">
+        <div class="shadow bg-white p-4 w-100">
+          <h3 class="fw-bold mb-0">Team</h3>
+          <hr>
+          <h4 class="fw-bold mb-0">Hemanth Veligatla</h4>
+          <small>Co-Founder & CEO.</small>
+
+          <h4 class="fw-bold mb-0 mt-5">Ravi Teja Veligatla</h4>
+          <small>Co-Founder & CTO.</small>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row my-5">
+      <div class="col-12 text-center">
+        <div class="mt-5">
+          A product of <a href="https://prasanta.business" target="_bla
+          ">Prasanta Communications</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
