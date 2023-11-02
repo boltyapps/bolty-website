@@ -3,31 +3,18 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header style="display: flex; justify-content:space-between; align-items: center; flex-wrap: wrap;">
-  <!--<img src="/insidert.png" alt="insidert" width="128">--!>
-	<!-- <h2>
-		{SITE_TITLE}
-	</h2> -->
-	<div class="container mt-5">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">BOLTY</a>
-            <a class="nav-link" href="/store" style="margin-left:50%;">Store</a>
-            <a class="nav-link" href="/blog" style="margin-left:;">Blog</a>
-            <a class="btn btn-dark" href="#service-bookings">Book Services</a>
-          </div>
-        </nav>
-      </div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">BOLTY</a>
+          <a class="nav-link" href="/store" style="margin-left:50%;">Store</a>
+          <a class="nav-link" href="/blog" style="margin-left:;">Blog</a>
+          <a class="btn btn-dark" href="#service-bookings">Book Services</a>
+        </div>
+      </nav>
     </div>
-  </div>!
-</header>
-<style>
-	header {
-		margin: 0em 0 2em;
-	}
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>
+  </div>
+</div>
+

@@ -1,8 +1,9 @@
 ---
 import MasterLayout from '../../layouts/MasterLayout.astro';
-import PostHeader from '../../components/PostHeader.astro';
+import StoreItem from '../../components/StoreItem.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
+import StoreItem from '../../components/StoreItem.astro';
 
 const posts = (await getCollection('store')).sort(
 	(a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
@@ -13,10 +14,10 @@ const posts = (await getCollection('store')).sort(
   <div class="container"> 
     <div class="row"> 
       <div class="col-12"> 
-        <h1>Blog</h1>
+        <h1>Store</h1>
         <div>
           {posts.map((post) => (
-            <PostHeader post={post} />
+            <StoreItem post={post} />
           ))}
         </div>
       </div>

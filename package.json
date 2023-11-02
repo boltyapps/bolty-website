@@ -15,7 +15,6 @@
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.4.0",
     "astro": "^2.10.15",
-    "astro-fuse": "^0.0.6",
     "fuse.js": "^7.0.0"
   }
 }

@@ -1,37 +1,24 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import PostHeader from "../components/PostHeader.astro";
+import SearchStore from "../components/SearchStore.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
-);
 
-const featuredPosts = posts.filter(post => post.data.isFeatured)
+const posts = (await getCollection("store"));
+const filteredPosts = posts.map((p) => p.data);
+// console.log(filteredPosts);
 ---
 
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
- <!-- <div class="container mt-5">
-    <div class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">BOLTY</a>
-            <a class="btn btn-dark" href="#service-bookings">Book Services</a>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>!-->
+
 
   <div class="container" style="margin-top: 8rem; margin-bottom: 8rem;">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
+        <SearchStore />
+
         <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
         <h3 class="mt-3 display-6">We Make Your Car Services<br>Easy & Hassle-Free.</h3>
       </div>
@@ -244,44 +231,4 @@ const featuredPosts = posts.filter(post => post.data.isFeatured)
 
     </div>
   </div>
-
- <!-- <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-6 mb-4 d-flex align-items-center">
-        <div class="shadow bg-white p-4 w-100">
-          <h3 class="fw-bold mb-0">Contact</h3>
-          <hr>
-          <h4>+91 9963017273</h4>
-          <div class="mt-3 d-flex justify-content-between">
-            <a href="tel:+919963017273">Call Now</a>
-            <a href="wa.me/919963017273">Chat On WhatsApp</a>
-          </div>
-          <p class="mt-5">Operating from CIE, IIITH, Gachibowli, Hyderabad.</p>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 mb-4 d-flex align-items-center">
-        <div class="shadow bg-white p-4 w-100">
-          <h3 class="fw-bold mb-0">Team</h3>
-          <hr>
-          <h4 class="fw-bold mb-0">Hemanth Veligatla</h4>
-          <small>Co-Founder & CEO.</small>
-
-          <h4 class="fw-bold mb-0 mt-5">Ravi Teja Veligatla</h4>
-          <small>Co-Founder & CTO.</small>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container my-5">
-    <div class="row my-5">
-      <div class="col-12 text-center">
-        <div class="mt-5">
-          A product of <a href="https://prasanta.business" target="_bla
-          ">Prasanta Communications</a>
-        </div>
-      </div>
-    </div>
-  </div>!-->
 </MasterLayout>

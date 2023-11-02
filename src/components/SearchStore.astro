@@ -1,0 +1,44 @@
+---
+    import { getCollection } from "astro:content";
+    const posts = (await getCollection("store"));
+    const filteredPosts = posts.map((p) => p.data);
+---
+
+<search-store data-posts={JSON.stringify(filteredPosts)}>
+  <input type="text" id="search" class="form-control">
+  <ul class="list-group" id="results"></ul>
+</search-store>
+
+<script>
+    import Fuse from 'fuse.js';
+
+    class SearchStore extends HTMLElement {
+      constructor() {
+        super();
+        
+        const storeData = JSON.parse(this.dataset.posts);
+        console.log(storeData);
+
+        const searchInput = document.getElementById('search');
+
+        const fuseOptions = {
+          threshold: 0.2,
+          minMatchCharLength: 2,
+          keys: [
+            "title",
+            "productCode",
+            "tags"
+          ]
+        };
+
+        const fuse = new Fuse(storeData, fuseOptions);
+
+        searchInput?.addEventListener('input', () => {
+          const results = fuse.search(searchInput.value)
+          console.log(results)
+        });
+      }
+    }
+
+  customElements.define('search-store', SearchStore);
+</script>

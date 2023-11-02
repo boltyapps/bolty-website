@@ -4,7 +4,7 @@ import MasterLayout from "../../layouts/MasterLayout.astro";
 import DateFormatter from "../../components/DateFormatter.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("store");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,

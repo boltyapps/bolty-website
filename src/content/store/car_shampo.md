@@ -1,14 +1,15 @@
 ---
-title: "Books I read"
+title: "Car Shampoo"
 description: "List of titles  I read and also my recommendations so far."
 publishedDate: "Apr 04 2021"
 updatedDate: "Aug 7 2023"
 isFeatured: true
-link: "https://www.amazon.in/Amazon-Brand-Solimo-Bottle-Battery-Operated/dp/B0BB71KKPL/ref=s9_acsd_al_ot_cv2_0_i?_encoding=UTF8&pf_rd_m=A21TJRUUN4KGV&pf_rd_s=merchandised-search-3&pf_rd_r=HW62GHDA17AKHXPKS2KW&pf_rd_p=f37e6ee9-e0ca-460a-988d-8f943d94f01e&pf_rd_t=&pf_rd_i=21840546031&th=1"
-tags: ['productivity', 'books']  
+tags: ['tyu', 'klo']  
 heroImage:
     url: ""
     alt: ""
+affiliateLink: "https://www.amazon.in/Amazon-Brand-Solimo-Bottle-Battery-Operated/dp/B0BB71KKPL/ref=s9_acsd_al_ot_cv2_0_i?_encoding=UTF8&pf_rd_m=A21TJRUUN4KGV&pf_rd_s=merchandised-search-3&pf_rd_r=HW62GHDA17AKHXPKS2KW&pf_rd_p=f37e6ee9-e0ca-460a-988d-8f943d94f01e&pf_rd_t=&pf_rd_i=21840546031&th=1"
+productCode: '1001'
 ---
 
 The list in the order of my completion.
