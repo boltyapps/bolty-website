@@ -1,0 +1,12 @@
+---
+const {frontmatter} = Astro.props;
+const {title, description} = frontmatter;
+---
+<html>
+<!-- .. make hidden input for render frontmatter .. -->
+<input
+    type="hidden"
+    data-frontmatter
+    value={JSON.stringify({ title, description })}
+/>
+</html>

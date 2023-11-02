@@ -14,8 +14,9 @@ const posts = (await getCollection("blog")).sort(
 const featuredPosts = posts.filter(post => post.data.isFeatured)
 ---
 
+
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="container mt-5">
+ <!-- <div class="container mt-5">
     <div class="row">
       <div class="col">
         <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
@@ -26,7 +27,7 @@ const featuredPosts = posts.filter(post => post.data.isFeatured)
         </nav>
       </div>
     </div>
-  </div>
+  </div>!-->
 
   <div class="container" style="margin-top: 8rem; margin-bottom: 8rem;">
     <div class="row">
@@ -244,7 +245,7 @@ const featuredPosts = posts.filter(post => post.data.isFeatured)
     </div>
   </div>
 
-  <div class="container">
+ <!-- <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6 mb-4 d-flex align-items-center">
         <div class="shadow bg-white p-4 w-100">
@@ -282,5 +283,5 @@ const featuredPosts = posts.filter(post => post.data.isFeatured)
         </div>
       </div>
     </div>
-  </div>
+  </div>!-->
 </MasterLayout>

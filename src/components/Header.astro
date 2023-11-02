@@ -4,18 +4,24 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <header style="display: flex; justify-content:space-between; align-items: center; flex-wrap: wrap;">
-  <img src="/insidert.png" alt="insidert" width="128">
+  <!--<img src="/insidert.png" alt="insidert" width="128">--!>
 	<!-- <h2>
 		{SITE_TITLE}
 	</h2> -->
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/tags">Tags</HeaderLink>
-		<!-- <HeaderLink href="/about">Projects</HeaderLink> -->
-		<!-- <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink> -->
-	</nav>
+	<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">BOLTY</a>
+            <a class="nav-link" href="/store" style="margin-left:50%;">Store</a>
+            <a class="nav-link" href="/blog" style="margin-left:;">Blog</a>
+            <a class="btn btn-dark" href="#service-bookings">Book Services</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>!
 </header>
 <style>
 	header {

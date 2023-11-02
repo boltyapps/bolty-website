@@ -4,19 +4,23 @@ import PostHeader from '../../components/PostHeader.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('store')).sort(
 	(a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
 );
 ---
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>Blog</h1>
-  <div>
-    {
-      posts.map((post) => (
-        <PostHeader post={post} />
-      ))
-    }
+  <div class="container"> 
+    <div class="row"> 
+      <div class="col-12"> 
+        <h1>Blog</h1>
+        <div>
+          {posts.map((post) => (
+            <PostHeader post={post} />
+          ))}
+        </div>
+      </div>
+    </div>
   </div>
 </MasterLayout>
 
