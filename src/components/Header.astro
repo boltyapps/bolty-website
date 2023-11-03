@@ -1,20 +1,49 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <div class="container mt-5">
   <div class="row">
     <div class="col">
-      <nav class="navbar navbar-expand-lg rounded p-4" style="background-color: #ff8d31" data-bs-theme="light">
+      <nav
+        class="navbar navbar-expand-lg rounded p-4"
+        style="background-color: #ff8d31"
+        data-bs-theme="light"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="/">BOLTY</a>
-          <a class="nav-link" href="/store" style="margin-left:50%;">Store</a>
-          <a class="nav-link" href="/blog" style="margin-left:;">Blog</a>
-          <a class="btn btn-dark" href="#service-bookings">Book Services</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="/store">Store</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="/blog">Blog</a>
+              </li>
+              <li class="nav-item mx-4">
+                <a class="btn btn-dark" href="/book-service"
+                  >Book Services</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </div>
   </div>
 </div>
-
