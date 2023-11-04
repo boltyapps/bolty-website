@@ -1,6 +1,6 @@
 ---
 import MasterLayout from '../../layouts/MasterLayout.astro';
-import StoreItem from '../../components/StoreItem.astro';
+import SearchStore from "../../components/SearchStore.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import StoreItem from '../../components/StoreItem.astro';
@@ -11,10 +11,15 @@ const posts = (await getCollection('store')).sort(
 ---
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="container"> 
+  <div class="container my-5"> 
     <div class="row"> 
       <div class="col-12"> 
         <h1>Store</h1>
+        
+        <div class="my-4">
+          <SearchStore />
+        </div>
+
         <div>
           {posts.map((post) => (
             <StoreItem post={post} />

@@ -1,0 +1,28 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5" style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card card-body mt-5 shadow">
+          <h3 class="fw-bold text-success">Submitted successfully</h3>
+          <p class="mb-4 mt-4">Our team will contact you shortly. If you have any queries, suggestions, ideas, please reach out to us at 9963017273. Or write to support@bolty.in</p>
+
+          <a href="https://api.whatsapp.com/send/?phone=919963017273">Click here to message us on WhatsApp.</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-4 mx-auto text-center">
+        <img src="/img/good-mood.png" alt="good" width="128">
+        
+        <p class="mt-4 mb-0">Involve in our community</p>
+        <a href="https://chat.whatsapp.com/EhnC2nuKQzF7xwukstfngh" class="btn btn-success">Join our WhatsApp Group</a>
+      </div>
+    </div>
+  </div>
+</MasterLayout>

@@ -5,8 +5,17 @@
 ---
 
 <search-store data-posts={JSON.stringify(filteredPosts)}>
-  <input type="text" id="search" class="form-control">
-  <ul class="list-group" id="results"></ul>
+  <div class="mb-5">
+    <div class="d-flex align-items-center mb-2">
+      <img src="/img/search.png" height="16" width="16" class="me-2" alt="search bolty store">
+      <p class="mb-0">Search</p>
+    </div>
+    <div>
+      <input type="search" autocomplete="false" id="search" class="form-control" placeholder="Enter Product Code / Name">
+    </div>
+    <ul class="list-group mt-3" id="results">
+    </ul>
+  </div>
 </search-store>
 
 <script>
@@ -34,8 +43,38 @@
         const fuse = new Fuse(storeData, fuseOptions);
 
         searchInput?.addEventListener('input', () => {
+          const resultsBlock = document.getElementById('results');
+
+          if (searchInput.value == "") {
+            resultsBlock!.innerHTML = "";
+            return;
+          }
+
           const results = fuse.search(searchInput.value)
-          console.log(results)
+
+          console.log(results);
+
+          if (results.length == 0) {
+            resultsBlock!.innerHTML = `<li class="list-group-item">No results</li>`;
+            return;
+          }
+
+          let resultItems: string = "";
+
+          results.forEach((r: any) => {
+            resultItems = resultItems + `
+              <li class="list-group-item d-flex flex-wrap align-items-center">
+                <img src=${r.item.heroImage.url} alt=${r.item.heroImage.alt} width="128" class="me-3">
+                <div>
+                  <small>Product Code: ${r.item.productCode}</small>
+                  <p>${r.item.title}</p>
+                  <a href=${r.item.affiliateLink} target="_blank" class="me-3">Buy Now On Amazon</a>
+                </div>
+              </li>
+            `;
+          })
+
+          resultsBlock!.innerHTML = resultItems;
         });
       }
     }

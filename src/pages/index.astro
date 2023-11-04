@@ -1,9 +1,7 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import SearchStore from "../components/SearchStore.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-
 
 const posts = (await getCollection("store"));
 const filteredPosts = posts.map((p) => p.data);
@@ -15,8 +13,6 @@ const filteredPosts = posts.map((p) => p.data);
   <div class="container" style="margin-top: 8rem; margin-bottom: 8rem;">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
-        <SearchStore />
-
         <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
         <h3 class="mt-3 display-6">We Make Your Car Services<br>Easy & Hassle-Free.</h3>
       </div>
@@ -35,7 +31,7 @@ const filteredPosts = posts.map((p) => p.data);
               <div class="card-body">
                 <h2>Car Service</h2>
                 <p>Select the service you need and we take care of the rest.</p>
-                <a href="/book-service" class="btn btn-dark">Book Service Now</a>
+                <a href="/book-service" class="btn btn-dark">Book Now</a>
               </div> 
             </div>
           </div>
@@ -51,7 +47,7 @@ const filteredPosts = posts.map((p) => p.data);
               <div class="card-body">
                 <h2>Bolty Store</h2>
                 <p>Buy essentials for your car from our handpicked store.</p>
-                <a href="/book-service" class="btn btn-dark">Book Service Now</a>
+                <a href="/store" class="btn btn-dark">Go To Store</a>
               </div> 
             </div>
           </div>
@@ -60,7 +56,7 @@ const filteredPosts = posts.map((p) => p.data);
     </div>
   </div>
 
-  <div class="container my-5">
+  <div class="container my-5 pt-5">
     <div class="row">
       <div class="col-12 text-center mb-4">
         <h2>Reasons to choose <strong>Bolty</strong></h2>
@@ -132,138 +128,8 @@ const filteredPosts = posts.map((p) => p.data);
         <img src="img/serviceprovider.png" alt="service provider" width="128">
         <h5  class="mt-3 mb-0 display-6">Your car is in safe hands!</h5>
         <h4>We handpick our service partners who have 10+ years of experience.</h4>
+        <a href="/book-service" class="btn btn-dark btn-lg">Book Your Service Now</a>
       </div>
-    </div>
-  </div>
-
-  <div class="container my-5" id="service-bookings">
-    <div class="row border border-2 rounded p-5 bg-white">
-      <div class="col-12 text-center mb-3">
-        <h2 class="mb-0">Book Your Service</h2>
-        <p>You can select all the services you need.</p>
-      </div>
-
-      <form name="interest" method="POST" data-netlify="true" action="/success" class="row">
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div class="form-check">
-              <input class="form-check-input border border-primary border-2" type="checkbox" value="Periodic Maintenance" id="periodicMaintenance" name="serviceItem">
-              <label class="form-check-label" for="periodicMaintenance">
-                Periodic Maintenance
-              </label>
-            </div>
-
-            <div class="accordion mt-3" id="periodicMaintenanceAccordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flushCollapsePeriodicMaintenance" aria-expanded="false" aria-controls="flushCollapsePeriodicMaintenance">
-                    Service Details
-                  </button>
-                </h2>
-                <div id="flushCollapsePeriodicMaintenance" class="accordion-collapse collapse"
-                  data-bs-parent="#periodicMaintenanceAccordion">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>Car Wash & Interior Cleaning</li>
-                      <li>Engine Oil Change</li>
-                      <li>Air Filter Change</li>
-                      <li>Coolant Change</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div class="form-check">
-              <input class="form-check-input border border-primary border-2" type="checkbox" value="Denting & Painting" id="dentingAndPainting" name="serviceItem">
-              <label class="form-check-label" for="dentingAndPainting">
-                Denting & Painting
-              </label>
-            </div>
-
-            <div class="accordion mt-3" id="dentingAndPaintingAccordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flushCollapseDentingAndPainting" aria-expanded="false" aria-controls="flushCollapseDentingAndPainting">
-                    Service Details
-                  </button>
-                </h2>
-                <div id="flushCollapseDentingAndPainting" class="accordion-collapse collapse"
-                  data-bs-parent="#dentingAndPaintingAccordion">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>Denting</li>
-                      <li>Painting</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div class="form-check">
-              <input class="form-check-input border border-primary border-2" type="checkbox" value="Wheel Care" id="wheelCare" name="serviceItem">
-              <label class="form-check-label" for="wheelCare">
-                Wheel Care
-              </label>
-            </div>
-
-            <div class="accordion mt-3" id="wheelCareAccordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flushCollapseWheelCare" aria-expanded="false" aria-controls="flushCollapseWheelCare">
-                    Service Details
-                  </button>
-                </h2>
-                <div id="flushCollapseWheelCare" class="accordion-collapse collapse" data-bs-parent="#wheelCareAccordion">
-                  <div class="accordion-body">
-                    <ul>
-                      <li>Wheel Alignment</li>
-                      <li>Wheel Balancing</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div>
-              <label for="otherRepair" class="form-label">Other Repairs/Services</label>
-              <textarea class="form-control border border-primary border-2" id="otherRepair" rows="2" placeholder="Write here" name="repairs-or-services"></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div>
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-3 d-flex align-items-center mb-4">
-          <div class="card card-body shadow">
-            <div>
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="number" class="form-control" id="phone" name="phone" required>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 mt-4 text-center">
-          <button type="submit" class="btn btn-dark">Book Services Now</button>
-        </div>
-      </form>
-
     </div>
   </div>
 </MasterLayout>

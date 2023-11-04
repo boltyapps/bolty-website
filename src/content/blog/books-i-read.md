@@ -1,57 +1,36 @@
 ---
-title: "Books I read"
-description: "List of titles  I read and also my recommendations so far."
-publishedDate: "Apr 04 2021"
-updatedDate: "Aug 7 2023"
+title: "What is Bolty and why choose it for your car servicing?"
+description: "Because your car deserves all the pampering, it should go into the right hands for the servicing."
+publishedDate: "Nov 04 2023"
+updatedDate: "Nov 04 2023"
 isFeatured: true
-tags: ['productivity', 'books']  
+tags: ['bolty']  
 heroImage:
     url: ""
     alt: ""
 ---
 
-The list in the order of my completion.
+Bolty is a professional car aggregator service dedicated to delivering enhanced transparency and unmatched convenience to car owners. Our platform empowers vehicle owners with a comprehensive and user-friendly solution for their automotive needs, ensuring a seamless and informed experience.
 
-- Life is what you make it.
-- Roots.
-- American Sniper.
-- Rich dad, poor dad.
-- Hooked.
-- The power of subconscious mind.
-- Think and grow rich.
-- Zero to one.
-- How to win friends and influence people.
-- Rework.
-- All marketers tell stories.
-- The challenger sale.
-- Homo Sapiens - A brief history of mankind.
-- The tipping point.
-- Blink.
-- FAQs on marketing.
-- Never split the difference.
-- The lean startup.
-- Man's search for meaning
+## why choose bolty?
 
-## Current Readings
+### Transparency
+Bolty is committed to transparency in all its services. We provide clear and upfront information, ensuring car owners have full knowledge of the processes and costs involved.
 
-- The Richest Man in Babylon
+### Convenience
+Our platform is designed with the utmost convenience in mind. From booking services to receiving real-time updates and accessing essential information, Bolty simplifies the car ownership experience.
 
-## In queue
+### Wide Range of Services
+Bolty offers a comprehensive suite of services, ranging from maintenance and repair to insurance and car-related information. You can find everything you need in one place.
 
-- Thinking fast and slow
-- The courage to be disliked
-- Influence 
-- Steve Jobs
+### Quality and Trust
+We prioritize quality in all aspects of our services, and we aim to build trust with our customers. Our network of verified service providers and expert guidance ensures top-notch care for your vehicle.
 
-## I recommend
+### Cost-Efficiency
+Bolty strives to offer cost-effective solutions, helping car owners save both time and money while maintaining their vehicles.
 
-1. Home Sapiens.
-2. Never split the difference.
-3. How to win friends and influence people.
-4. The power of subconscious mind.
+### User-Friendly Interface
+Our platform is user-friendly and intuitive, making it easy for car owners to navigate and make informed decisions regarding their vehicles.
 
-## For business
-
-1. The lean startup.
-2. Zero to one.
-3. Never split the difference.
+### Customer Support
+Bolty is backed by a dedicated customer support team ready to assist you with any inquiries or issues you may encounter.
