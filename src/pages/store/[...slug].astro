@@ -19,22 +19,24 @@ const { Content } = await post.render();
 <MasterLayout {...post.data}>
   <div class="container my-5">
     <div class="row">
-      <div class="col-sm-12 col-md-10 mx-auto bg-white p-5">
+      <div class="col-sm-12 mb-4 col-md-4">
+        {
+          post.data.heroImage.url && (
+            <img
+              width={"100%"}
+              src={post.data.heroImage.url}
+              alt="{post.data.heroImage.alt}"
+            />
+          )
+        }
+      </div>
+      <div class="col-sm-12 col-md-8 bg-white p-5">
         <article>
-          {
-            post.data.heroImage.url && (
-              <img
-                width={"100%"}
-                src={post.data.heroImage.url}
-                alt="{post.data.heroImage.alt}"
-              />
-            )
-          }
-      
-          <div class="">
+          <div class="mb-5">
             <h1 class="mb-0">
               {post.data.title}
             </h1>
+            <a href={post.data.affiliateLink} target="_blank" class="btn btn-warning btn-lg">Buy Now From Amazon</a>
           </div>
       
           <Content />
