@@ -16,5 +16,8 @@
     "@astrojs/sitemap": "^1.4.0",
     "astro": "^2.10.15",
     "fuse.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "axios": "^1.7.4"
   }
 }

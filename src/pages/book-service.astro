@@ -11,63 +11,57 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </div>
 
       <div class="col-md-6 mx-auto">
-        <form name="interest" method="POST" data-netlify="true" action="/success" class="bg-white p-5">
-          <label class="form-label">Select all services you need</label>
-          <div class="list-group mb-3">
-            <label class="list-group-item d-flex gap-2">
-              <input class="form-check-input flex-shrink-0 border border-primary border-2" type="checkbox" value="" checked="">
-              <span>
-                Periodic Maintenance
-                <small class="d-block text-body-secondary">
-                  Car Wash & Interior Cleaning,
-                  Engine Oil Change,
-                  Air Filter Change,
-                  Coolant Change and all necessary checks.</small>
-              </span>
-            </label>
-            <label class="list-group-item d-flex gap-2">
-              <input class="form-check-input flex-shrink-0 border border-primary border-2" type="checkbox" value="">
-              <span>
-                Denting & Painting
-                <small class="d-block text-body-secondary">
-                  Denting,
-                  Painting
-                </small>
-              </span>
-            </label>
-            <label class="list-group-item d-flex gap-2">
-              <input class="form-check-input flex-shrink-0 border border-primary border-2" type="checkbox" value="">
-              <span>
-                Wheel Care
-                <small class="d-block text-body-secondary">
-                  Wheel Alignment,
-                  Wheel Balancing,
-                  Air pressure check,
-                  Wheel condition checks
-                </small>
-              </span>
-            </label>
+        <form data-netlify="true" action="/success" id="interest" method="POST" class="bg-white p-5">
+          <div class="mb-3">
+            <label for="no_of_panels" class="form-label">No Of Panels for Denting & Painting</label>
+            <input
+              type="text"
+              class="form-control"
+              id="no_of_panels"
+              name="no_of_panels"
+              required
+            />
           </div>
 
           <div class="mb-3">
-            <label for="otherRepair" class="form-label">Other Repairs/Services</label>
-            <textarea class="form-control border border-primary border-2" id="otherRepair" rows="2" placeholder="Write here" name="repairs-or-services"></textarea>
+            <label for="otherRepair" class="form-label"
+              >Other Repairs/Services</label
+            >
+            <textarea
+              class="form-control border border-primary border-2"
+              id="otherRepair"
+              rows="2"
+              placeholder="Write here"
+              name="repairs-or-services"></textarea>
           </div>
 
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
           </div>
 
           <div class="mb-3">
             <label for="phone" class="form-label">Phone Number</label>
-            <input type="number" class="form-control" id="phone" name="phone" required>
+            <input
+              type="number"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
           </div>
 
-          <button type="submit" class="btn btn-dark text-center">Book Now</button>
+          <button type="submit" class="btn btn-dark text-center"
+            >Book Now</button
+          >
         </form>
       </div>
-
     </div>
   </div>
 </MasterLayout>

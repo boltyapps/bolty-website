@@ -1,0 +1,22 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5" style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h1>Shipping & Delivery</h1>
+        <h2>Order Processing & Shipping time</h2>
+        <p>Based on the service request, it will take 3-10 days for the delivery of the service. Once the final estimation is confirmed, the order will be processed for service.</p>
+
+        <h2>Shipping & Delivery Costs</h2>
+        <p>Based on the distance of the service, the shipping and delivery costs will be calculated. The cost will be charged accordingly to the service.</p>
+
+        <h2>International Shipping</h2>
+        <p>At the moment, we do not process and International Shipping. We will update you as soon as we start processing International Shipping.</p>
+      </div>
+    </div>
+  </div>
+</MasterLayout>

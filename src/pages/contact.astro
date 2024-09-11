@@ -1,0 +1,28 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5" style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h1>Contact</h1>
+        <div class="mt-5">
+          <small>Phone</small>
+          <p>+91 9963017273</p>
+        </div>
+
+        <div class="mt-5">
+          <small>Email</small>
+          <p>support@bolty.in</p>
+        </div>
+
+        <div class="mt-5">
+          <small>Registered & Operations Address</small>
+          <p>First floor, Vasista Bhavan, Near DLF gate 3, Gachibowli, Hyderabad, Telangana 500032.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
