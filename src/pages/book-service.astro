@@ -13,7 +13,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       <div class="col-md-6 mx-auto">
         <form data-netlify="true" action="/success" id="interest" method="POST" class="bg-white p-5">
           <div class="mb-3">
-            <label for="no_of_panels" class="form-label">No Of Panels for Denting & Painting</label>
+            <label for="car_name" class="form-label">Car Brand & Model</label>
+            <input
+              type="text"
+              class="form-control"
+              id="car_name"
+              name="car_name"
+              required
+            />
+          </div>
+          
+          <div class="mb-3">
+            <label for="no_of_panels" class="form-label">No of Panels for Denting & Painting</label>
             <input
               type="text"
               class="form-control"
@@ -28,7 +39,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
               >Other Repairs/Services</label
             >
             <textarea
-              class="form-control border border-primary border-2"
+              class="form-control"
               id="otherRepair"
               rows="2"
               placeholder="Write here"
@@ -57,7 +68,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             />
           </div>
 
-          <button type="submit" class="btn btn-dark text-center"
+          <button type="submit" class="btn btn-dark text-center w-100"
             >Book Now</button
           >
         </form>

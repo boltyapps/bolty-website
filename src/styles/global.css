@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 /* 606C38
 283618
@@ -7,7 +7,7 @@ DDA15E
 BC6C25 */
 
 body {
-	font-family: 'Epilogue', sans-serif;
+	font-family: "Manrope", sans-serif;
   font-size: x-large;
 	margin: auto;
 	padding: 20px;
