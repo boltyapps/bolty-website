@@ -6,7 +6,7 @@ updatedDate: "Nov 04 2023"
 isFeatured: false
 tags: ['cleaning', 'shampoo', 'premium']  
 heroImage:
-    url: "/store/carwashshampoo.jpg"
+    url: "/links/carwashshampoo.jpg"
     alt: "car wash shampoo"
 affiliateLink: "https://amzn.to/3QVDqcD"
 productCode: '1004'

@@ -4,7 +4,7 @@ import MasterLayout from "../../layouts/MasterLayout.astro";
 import DateFormatter from "../../components/DateFormatter.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("store");
+  const posts = await getCollection("links");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
@@ -36,7 +36,10 @@ const { Content } = await post.render();
             <h1 class="mb-0">
               {post.data.title}
             </h1>
-            <a href={post.data.affiliateLink} target="_blank" class="btn btn-warning btn-lg">Buy Now From Amazon</a>
+            <div class="my-3 bg-dark-subtle p-4 rounded">
+              <a href={post.data.affiliateLink} target="_blank" class="btn btn-warning btn">Buy from Amazon -></a>
+              <p class="mb-0 mt-3">Click on this link to buy from Amazon.</p>
+            </div>
           </div>
       
           <Content />

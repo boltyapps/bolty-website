@@ -6,7 +6,7 @@ updatedDate: "Nov 04 2023"
 isFeatured: false
 tags: ['cleaning', 'shampoo', 'budget-friendly']  
 heroImage:
-    url: "/store/wavexwonder.jpg"
+    url: "/links/wavexwonder.jpg"
     alt: "wavex wonder"
 affiliateLink: "https://amzn.to/479Oicp"
 productCode: '1005'

@@ -6,7 +6,7 @@ updatedDate: "Nov 04 2023"
 isFeatured: false
 tags: ['cleaning', 'microfiber', 'best-value']  
 heroImage:
-    url: "/store/sheenmicrofiber.jpg"
+    url: "/links/sheenmicrofiber.jpg"
     alt: "Sheen Micro Fiber"
 affiliateLink: "https://amzn.to/3sAzWTC"
 productCode: '1003'

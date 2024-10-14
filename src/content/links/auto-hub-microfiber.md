@@ -6,7 +6,7 @@ updatedDate: "Nov 04 2023"
 isFeatured: false
 tags: ['cleaning', 'microfiber', 'budget-friendly']  
 heroImage:
-    url: "/store/autohub.jpg"
+    url: "/links/autohub.jpg"
     alt: "auto hub heavy microfiber "
 affiliateLink: "https://amzn.to/47xo03O"
 productCode: '1002'

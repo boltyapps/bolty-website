@@ -6,7 +6,7 @@ updatedDate: "Nov 04 2023"
 isFeatured: false
 tags: ['cleaning', 'microfiber', 'premium']  
 heroImage:
-    url: "/store/shinexpro.jpg"
+    url: "/links/shinexpro.jpg"
     alt: "shinex pro microfiber"
 affiliateLink: "https://amzn.to/491oror"
 productCode: '1001'

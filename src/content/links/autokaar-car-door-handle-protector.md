@@ -6,7 +6,7 @@ updatedDate: "Mar 02 2023"
 isFeatured: false
 tags: ['protector', 'door', 'budget-friendly']  
 heroImage:
-    url: "/store/doorhandleprotector.jpg"
+    url: "/links/doorhandleprotector.jpg"
     alt: "door handle protector"
 affiliateLink: "https://amzn.to/3wEpZWV"
 productCode: '1006'

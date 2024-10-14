@@ -5,7 +5,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import StoreItem from '../../components/StoreItem.astro';
 
-const posts = (await getCollection('store')).sort(
+const posts = (await getCollection('links')).sort(
 	(a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
 );
 ---
@@ -14,7 +14,8 @@ const posts = (await getCollection('store')).sort(
   <div class="container my-5"> 
     <div class="row"> 
       <div class="col-12"> 
-        <h1>Store</h1>
+        <h1 class="mb-0">Links</h1>
+        <p>These are hand-picked products that we have found to be the best value for your car.</p>
         
         <div class="my-4">
           <SearchStore />

@@ -1,13 +1,13 @@
 ---
     import { getCollection } from "astro:content";
-    const posts = (await getCollection("store"));
+    const posts = (await getCollection("links"));
     const filteredPosts = posts.map((p) => p.data);
 ---
 
 <search-store data-posts={JSON.stringify(filteredPosts)}>
   <div class="mb-5">
     <div class="d-flex align-items-center mb-2">
-      <img src="/img/search.png" height="16" width="16" class="me-2" alt="search bolty store">
+      <img src="/img/search.png" height="16" width="16" class="me-2" alt="search bolty links">
       <p class="mb-0">Search</p>
     </div>
     <div>

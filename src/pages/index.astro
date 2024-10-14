@@ -3,7 +3,7 @@ import MasterLayout from "../layouts/MasterLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("store"));
+const posts = (await getCollection("links"));
 const filteredPosts = posts.map((p) => p.data);
 // console.log(filteredPosts);
 ---
