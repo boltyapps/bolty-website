@@ -1,0 +1,11 @@
+---
+import DateFormatter from '../components/DateFormatter.astro';
+
+const { service } = Astro.props;
+---
+
+<article class="bg-white p-4 mb-3"> 
+  <DateFormatter date={service.data.servicedOn}></DateFormatter>
+  <h3 class="mb-0 mt-0">{service.data.title}</h3>
+  <a href={`/services/${service.slug}/`}>Read Post</a>  
+</article>

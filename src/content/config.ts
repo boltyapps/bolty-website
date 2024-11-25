@@ -48,4 +48,22 @@ const links = defineCollection({
 	}),
 });
 
-export const collections = { blog, links };
+const services = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		servicedOn: z
+			.string()
+			.or(z.date())
+			.transform((val) => new Date(val)),
+    heroImage: z.object({
+      url: z.string().optional(),
+      alt: z.string().optional(),
+    }),
+    brand: z.string(),
+    model: z.string(),
+    color: z.string()
+	}),
+});
+
+export const collections = { blog, links, services };
