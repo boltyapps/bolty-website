@@ -1,0 +1,27 @@
+---
+import MasterLayout from '../../layouts/MasterLayout.astro';
+import PostHeader from '../../components/PostHeader.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import ServiceHeader from '../../components/ServiceHeader.astro';
+
+const services = (await getCollection('services')).sort(
+	(a, b) => b.data.servicedOn.valueOf() - a.data.servicedOn.valueOf()
+);
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5"> 
+    <div class="row"> 
+      <div class="col-12"> 
+        <h1>Blog</h1>
+        <div>
+          {services.map((service) => (
+            <ServiceHeader service={service} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
+

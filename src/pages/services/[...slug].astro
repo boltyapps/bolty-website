@@ -1,0 +1,49 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import MasterLayout from "../../layouts/MasterLayout.astro";
+import DateFormatter from "../../components/DateFormatter.astro";
+
+export async function getStaticPaths() {
+  const services = await getCollection("services");
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: service,
+  }));
+}
+type Props = CollectionEntry<"services">;
+
+const service = Astro.props;
+const { Content } = await service.render();
+---
+
+<MasterLayout {...service.data}>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 mx-auto bg-white p-5">
+        <article>
+          {
+            service.data.heroImage.url && (
+              <img
+                class="mb-4"
+                width={"100%"}
+                src={service.data.heroImage.url}
+                alt={service.data.heroImage.alt}
+              />
+            )
+          }
+      
+          <div class="mb-5">
+            <h1 class="mb-0">
+              {service.data.title}
+            </h1>
+            <p class="mb-0 mt-0">
+              <DateFormatter date={service.data.servicedOn} />
+            </p>
+          </div>
+      
+          <Content />
+        </article>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
