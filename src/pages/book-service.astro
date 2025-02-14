@@ -4,6 +4,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <script>
+    fbq('track', 'Lead');
+  </script>
   <div class="container my-5">
     <div class="row">
       <div class="col-12 text-center mb-3">
