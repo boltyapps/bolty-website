@@ -1,0 +1,20 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5" style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+          <h3 class="fw-bold mb-0">Team</h3>
+          <hr />
+          <h4 class="fw-bold mb-0">Hemanth Veligatla</h4>
+          <small>Co-Founder & CEO.</small>
+  
+          <h4 class="fw-bold mb-0 mt-5">Ravi Teja Veligatla</h4>
+          <small>Co-Founder & CTO.</small>
+      </div>
+    </div>
+  </div>
+</MasterLayout>

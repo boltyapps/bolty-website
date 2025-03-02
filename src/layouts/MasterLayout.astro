@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import "../styles/index.scss";
 
 // type Props = CollectionEntry<'blog'>['data'];
 export interface Props {
@@ -19,11 +20,6 @@ const { title, description } = Astro.props;
     <title>Bolty</title>
     <meta name="description"
       content="Get car service at your convenient time. A hassle-free experience so that you can stop worrying about maintenance delays.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -33,61 +29,21 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <style>
-      body {
-        /* font-family: 'Rubik', sans-serif; */
-        /* background-color: #fcf3ff; */
-        font-family: "Manrope", sans-serif;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2342439f' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-      }
-
-      @media (min-width: 768px) {
-        #chassis {
-          background: url(img/back.svg) no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-        }
-      }
-    </style>
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window,document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '530693302590764'); 
-      fbq('track', 'PageView');
-    </script>
+    <script src="../scripts/pixel.js"></script>
     <noscript>
     <img height="1" width="1" 
     src="https://www.facebook.com/tr?id=530693302590764&ev=PageView
     &noscript=1"/>
     </noscript>
-  <!-- End Facebook Pixel Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B578MGMVW5"></script>
+    <script src="../scripts/gtag.js"></script>
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B578MGMVW5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-B578MGMVW5');
-  </script>
-
-	<body>
-	<Header /> 
+	<body style="background-color: #f3f3f3;">
+	  <Header /> 
 		<main>
 			<slot/>
 		</main>
-	 <Footer />
+	  <Footer />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>

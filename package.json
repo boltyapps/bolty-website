@@ -15,7 +15,9 @@
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.4.0",
     "astro": "^2.10.15",
-    "fuse.js": "^7.0.0"
+    "bootstrap": "^5.3.3",
+    "fuse.js": "^7.0.0",
+    "sass": "^1.85.1"
   },
   "devDependencies": {
     "axios": "^1.7.4"
