@@ -1,0 +1,38 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description="Account Delete">
+  <script>
+    fbq('track', 'Lead');
+  </script>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 text-center mb-3">
+        <h2 class="mb-0">Delete Account</h2>
+        <p>Start deleting your account. Submit the phone number and your account will be deleted within 90 days. The deletion notification is sent to your phone number via SMS and WhatsApp. If you change your mind, you can login to your account and the deletion request will be terminated.</p>
+      </div>
+
+      <div class="col-md-6 mx-auto">
+        <form data-netlify="true" action="/delete-account-success" id="delete-account" method="POST" class="bg-white p-5">
+          
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input
+              type="number"
+              class="form-control"
+              id="phone"
+              name="phone"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-dark text-center w-100"
+            >Initiate Account Deletion</button
+          >
+        </form>
+      </div>
+    </div>
+  </div>
+</MasterLayout>

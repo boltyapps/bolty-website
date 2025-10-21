@@ -1,0 +1,19 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="container my-5" style="margin-top: 5rem;">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card card-body mt-5 shadow">
+          <h3 class="fw-bold text-success">Submitted successfully</h3>
+          <p class="mb-4 mt-4">Your account deletion is scheduled.</p>
+
+          <a href="https://api.whatsapp.com/send/?phone=919963017273">Click here to message us on WhatsApp for any more queries regarding your account.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</MasterLayout>
