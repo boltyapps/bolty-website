@@ -10,13 +10,13 @@ heroImage:
     alt: ""
 ---
 
-Bolty is a growing car makeover brand helping car owners bring back their vehicle’s shine with professional care and convenience. We’re on a mission to make car maintenance simple, transparent, and delightful.
+Bolty is a growing car makeover brand helping car owners bring back their vehicle’s shine with professional care and convenience. We’re on a mission to make car makeover simple, transparent, and delightful.
 
 We are looking for an operations Intern to work with us.
 
-Work Mode: Remote
-Working Hours: 9 AM – 6 PM (Monday to Saturday)
-Stipend: ₹10,000 per month
+- Work Mode: Remote
+- Working Hours: 9 AM – 6 PM (Monday to Saturday)
+- Stipend: ₹10,000 per month
 
 **What You’ll Do:**
 
@@ -45,6 +45,6 @@ Your key responsibilities include:
 
 **Contact**
 
-If you are interested, send your resume to support @ bolty.in (Without the spaces) or Send directly via WhatsApp to 9963017273.
+If you are interested, send your details via WhatsApp to 9963017273.
 
 *Note: This position is open only to full-time candidates. Students currently pursuing a degree are not eligible.*
