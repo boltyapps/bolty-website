@@ -1,13 +1,13 @@
 ---
-title: "What is Bolty"
-description: "You will get to know about us"
+title: "What is Bolty - Denting, Painting and Detailing Service Platform"
+description: "Discover Bolty: An innovative online platform for hassle-free car denting, painting, and detailing services. Industry Experts, 100% color match guarantee, 2-year warranty."
 publishedDate: "Jan 1 2025"
 updatedDate: "Jan 1 2025"
 isFeatured: true
-tags: ['bolty']  
+tags: ['bolty', 'car service', 'denting', 'painting', 'car repair', 'detailing']
 heroImage:
     url: ""
-    alt: ""
+    alt: "Bolty car denting and painting service"
 ---
 
 ### The problem

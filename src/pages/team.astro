@@ -1,9 +1,37 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Bolty Team - Meet Our Founders & Leadership";
+const pageDescription = "Meet the Bolty team: Hemanth Veligatla (CEO) and Ravi Teja Veligatla (CTO). Learn about the founders behind Hyderabad's innovative car makeover company.";
+const pageKeywords = "bolty founders, bolty team, hemanth veligatla, ravi teja veligatla, bolty leadership, car service experts";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bolty",
+    "description": pageDescription,
+    "url": "https://bolty.in",
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Hemanth Veligatla",
+        "jobTitle": "Co-Founder & CEO",
+        "knowsAbout": ["Car Service", "Denting", "Painting", "Business Management"]
+      },
+      {
+        "@type": "Person",
+        "name": "Ravi Teja Veligatla",
+        "jobTitle": "Co-Founder & CTO",
+        "knowsAbout": ["Car Service", "Technology", "Platform Development"]
+      }
+    ]
+  }}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

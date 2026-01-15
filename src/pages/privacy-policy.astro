@@ -1,9 +1,23 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Bolty Privacy Policy";
+const pageDescription = "Bolty's privacy policy explains how we collect, use, and protect your personal data. Learn about our data practices and your privacy rights.";
+const pageKeywords = "privacy policy, data protection, bolty privacy, user data, GDPR, privacy rights";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": pageDescription,
+    "url": "https://bolty.in/privacy-policy"
+  }}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

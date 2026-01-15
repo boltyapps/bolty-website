@@ -1,13 +1,13 @@
 ---
-title: "3M Car Wash Shampoo"
-description: "High Foam, Remove tough dirt and Safe on paint"
+title: "3M Car Wash Shampoo - Premium Car Cleaning Product | High Foam Formula"
+description: "Premium 3M Car Wash Shampoo with high foam formula that removes tough dirt safely. Perfect for professional detailers and car enthusiasts. Recommended by Bolty experts."
 publishedDate: "Nov 04 2023"
 updatedDate: "Nov 04 2023"
 isFeatured: false
-tags: ['cleaning', 'shampoo', 'premium']  
+tags: ['cleaning', 'shampoo', 'premium', 'car wash', '3m', 'detailing products']
 heroImage:
     url: "/links/carwashshampoo.jpg"
-    alt: "car wash shampoo"
+    alt: "3M Car Wash Shampoo - high foam car wash product"
 affiliateLink: "https://amzn.to/3QVDqcD"
 productCode: '1004'
 ---

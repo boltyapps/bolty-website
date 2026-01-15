@@ -1,9 +1,14 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Account Deletion Scheduled - Bolty";
+const pageDescription = "Your account deletion request has been successfully submitted and is scheduled for processing within 90 days.";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

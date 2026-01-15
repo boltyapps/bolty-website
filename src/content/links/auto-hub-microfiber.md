@@ -1,13 +1,13 @@
 ---
-title: "Auto Hub Heavy Microfiber Cloth"
-description: "Double Sided, Extra Thick, Lint-Free, 800 GSM"
+title: "Auto Hub Heavy Microfiber Cloth - 800 GSM Double-Sided Lint-Free Cloth"
+description: "Premium Auto Hub heavy microfiber cloth - double-sided, extra thick, lint-free 800 GSM. Perfect for car detailing, drying, and polishing. Budget-friendly quality product."
 publishedDate: "Nov 04 2023"
 updatedDate: "Nov 04 2023"
 isFeatured: false
-tags: ['cleaning', 'microfiber', 'budget-friendly']  
+tags: ['cleaning', 'microfiber', 'budget-friendly', 'cloth', 'detailing', 'car care']
 heroImage:
     url: "/links/autohub.jpg"
-    alt: "auto hub heavy microfiber "
+    alt: "Auto Hub Heavy Microfiber Cloth - 800 GSM double-sided lint-free"
 affiliateLink: "https://amzn.to/47xo03O"
 productCode: '1002'
 ---

@@ -1,13 +1,13 @@
 ---
-title: "Bolty mobile apps announcement"
-description: "We launched android and ios apps."
+title: "Bolty Mobile App Launch - iOS & Android Apps Now Available"
+description: "Download the Bolty mobile app on iOS and Android. Get car denting and painting services with a seamless, structured, and transparent experience. Available on App Store and Play Store."
 publishedDate: "Jan 15 2026"
 updatedDate: "Jan 15 2026"
 isFeatured: true
-tags: ['bolty']  
+tags: ['bolty', 'mobile app', 'ios', 'android', 'app launch', 'car service app', 'denting app']
 heroImage:
     url: ""
-    alt: ""
+    alt: "Bolty mobile app announcement"
 ---
 
 We’re happy to announce that Bolty mobile apps are now available on both the Play Store and the App Store. 

@@ -1,13 +1,13 @@
 ---
-title: "Car Door Handle Protector Sticker."
-description: "Transparent finger scratch guard."
+title: "Car Door Handle Protector Sticker - Transparent Scratch Guard | Universal Fit"
+description: "Transparent car door handle protector sticker for scratch and scuff protection. Universal fit for all car models. Budget-friendly protection to maintain car appearance."
 publishedDate: "Mar 02 2023"
 updatedDate: "Mar 02 2023"
 isFeatured: false
-tags: ['protector', 'door', 'budget-friendly']  
+tags: ['protector', 'door', 'budget-friendly', 'scratch protection', 'car maintenance']
 heroImage:
     url: "/links/doorhandleprotector.jpg"
-    alt: "door handle protector"
+    alt: "Car door handle protector sticker - transparent scratch guard"
 affiliateLink: "https://amzn.to/3wEpZWV"
 productCode: '1006'
 ---

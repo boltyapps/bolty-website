@@ -1,9 +1,23 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Bolty Refund & Cancellation Policy";
+const pageDescription = "Bolty's refund and cancellation policy. Easy cancellations within 2 hours, hassle-free refunds, and customer-friendly return process.";
+const pageKeywords = "refund policy, cancellation policy, returns, refund process, customer service, bolty policy";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": pageDescription,
+    "url": "https://bolty.in/refund-and-cancellation-policy"
+  }}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

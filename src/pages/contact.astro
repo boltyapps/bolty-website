@@ -1,9 +1,34 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Contact Bolty";
+const pageDescription = "Contact Bolty for free car denting, painting and detailing service estimation. Call +91 9963017273 or chat on WhatsApp. Located in Hyderabad, Telangana.";
+const pageKeywords = "contact bolty, car service inquiry, free estimation, denting painting contact, car repair contact, bolty support";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Bolty",
+      "telephone": "+91 9963017273",
+      "email": "support@bolty.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "First floor, Vasista Bhavan, Near DLF gate 3, Gachibowli",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500032",
+        "addressCountry": "IN"
+      }
+    }
+  }}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

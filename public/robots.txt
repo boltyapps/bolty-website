@@ -1,0 +1,33 @@
+# Robots.txt for Bolty
+# This file helps search engines crawl your website more efficiently
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /api
+Disallow: /*.json
+Disallow: /*.xml
+Disallow: /delete-account-success
+Crawl-delay: 1
+
+# Specific rules for common search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap location
+Sitemap: https://bolty.in/sitemap-index.xml

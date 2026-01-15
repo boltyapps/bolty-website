@@ -1,25 +1,31 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
 import "../styles/index.scss";
 
-// type Props = CollectionEntry<'blog'>['data'];
 export interface Props {
 	title: string;
 	description: string;
-	// image?: string;
+	keywords?: string;
+	image?: string;
+	ogType?: string;
+	schemaMarkup?: any;
 }
 
-const { title, description } = Astro.props;
+const { title, description, keywords, image, ogType, schemaMarkup } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bolty</title>
-    <meta name="description"
-      content="Get car service at your convenient time. A hassle-free experience so that you can stop worrying about maintenance delays.">
+    <BaseHead 
+      title={title}
+      description={description}
+      keywords={keywords}
+      image={image}
+      ogType={ogType}
+      schemaMarkup={schemaMarkup}
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">

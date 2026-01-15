@@ -1,9 +1,16 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Submission Successful - Bolty Car Service Estimation Received";
+const pageDescription = "Your estimation request has been successfully submitted to Bolty. Our team will contact you shortly to confirm your car service details.";
+const pageKeywords = "submission success, estimation received, service confirmation, bolty response";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

@@ -1,15 +1,29 @@
 ---
 import MasterLayout from '../../layouts/MasterLayout.astro';
 import PostHeader from '../../components/PostHeader.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
+
+const pageTitle = "Bolty Blog - Car Service Tips, Updates & Guides";
+const pageDescription = "Explore expert tips, service updates, announcements, and comprehensive guides on car denting, painting, detailing, and maintenance.";
+const pageKeywords = "car blog, denting tips, painting guide, car maintenance, car detailing, auto repair tips, bolty insights";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
 );
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": pageTitle,
+    "description": pageDescription,
+    "url": "https://bolty.in/blog"
+  }}
+>
   <div class="container my-5"> 
     <div class="row"> 
       <div class="col-sm-12 col-md-10 mx-auto bg-white p-5"> 

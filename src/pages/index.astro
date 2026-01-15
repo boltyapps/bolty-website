@@ -1,14 +1,49 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Bolty - Denting, Painting & Detailing Services | 100% Color Match";
+const pageDescription = "Get hassle-free car denting, painting and detailing services with 100% color match guarantee. Industry experts, premium paints, 2-year warranty. Book free estimation.";
+const pageKeywords = "car denting, car painting, auto detailing, car repair, color matching, dent removal, paint services, online car service, Hyderabad";
 ---
 
-
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="container" style="margin-top: 8rem; margin-bottom: 8rem;">
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  ogType="business.business"
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bolty",
+    "description": pageDescription,
+    "url": "https://bolty.in",
+    "telephone": "+91 9963017273",
+    "email": "support@bolty.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "First floor, Vasista Bhavan, Near DLF gate 3, Gachibowli",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500032",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/bolty_app",
+      "https://wa.me/919963017273"
+    ],
+    "priceRange": "₹₹",
+    "areaServed": "Hyderabad"
+  }}
+>
+  <div class="container" style="margin-top: 4rem; margin-bottom: 8rem;">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
-        <div class="card">
+        <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
+        <h3 class="mt-3 display-6">
+          Worry free denting, painting and detailing services by industry experts with <u>100%</u> color match guarantee. 
+        </h3>
+
+        <div class="card my-4">
           <div class="card-body bg-primary-subtle p-5">
             <h5>Download Now</h5>
              <a href="https://play.google.com/store/apps/details?id=in.bolty" target="_blank"><img src="/img/playstore.webp" alt="Play Store" height="40"></a> 
@@ -20,11 +55,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
              </div>
             </div>
         </div>
-
-        <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
-        <h3 class="mt-3 display-6">
-          Worry free denting, painting and detailing services by industry experts with <u>100%</u> color match guarantee. 
-        </h3>
 
         <a href="/get-free-estimation" class="btn btn-secondary btn-lg mt-3">Get Free Estimation -></a>
       </div>

@@ -1,9 +1,23 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Bolty Shipping & Delivery Policy";
+const pageDescription = "Bolty's shipping and delivery policy. Fast service within 3-10 days, flexible delivery options, and transparent delivery costs.";
+const pageKeywords = "delivery, shipping, service delivery, turnaround time, delivery policy, bolty delivery";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": pageDescription,
+    "url": "https://bolty.in/shipping-and-delivery"
+  }}
+>
   <div class="container my-5" style="margin-top: 5rem;">
     <div class="row">
       <div class="col-md-8 mx-auto">

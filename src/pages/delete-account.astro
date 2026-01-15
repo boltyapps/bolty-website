@@ -1,9 +1,16 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Delete Bolty Account";
+const pageDescription = "Request to delete your Bolty account. Your account will be securely deleted within 90 days. Your privacy and data are important to us.";
+const pageKeywords = "delete account, remove account, data deletion, privacy, account removal, bolty account";
 ---
 
-<MasterLayout title={SITE_TITLE} description="Account Delete">
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+>
   <script>
     fbq('track', 'Lead');
   </script>

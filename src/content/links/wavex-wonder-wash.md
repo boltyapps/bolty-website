@@ -1,13 +1,13 @@
 ---
-title: "Wavex Wonder Wash Car Shampoo"
-description: "Ultra Slick Formula That Wont Scratch or Leave Water Spots"
+title: "Wavex Wonder Wash Car Shampoo - Ultra Slick Formula | No Water Spots"
+description: "Wavex Wonder Wash car shampoo with ultra slick formula that won't scratch or leave water spots. High-foaming, concentrated, and safe for all car surfaces."
 publishedDate: "Nov 04 2023"
 updatedDate: "Nov 04 2023"
 isFeatured: false
-tags: ['cleaning', 'shampoo', 'budget-friendly']  
+tags: ['cleaning', 'shampoo', 'budget-friendly', 'car wash', 'detailing', 'car care']
 heroImage:
     url: "/links/wavexwonder.jpg"
-    alt: "wavex wonder"
+    alt: "Wavex Wonder Wash car shampoo - ultra slick no scratch formula"
 affiliateLink: "https://amzn.to/479Oicp"
 productCode: '1005'
 ---

@@ -1,9 +1,29 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const pageTitle = "Free Service Estimation - Bolty Denting, Painting and Detailing Quote";
+const pageDescription = "Get a free estimation for car denting, painting and detailing services from Bolty. No hidden charges. Fill the form or contact us via WhatsApp for instant quote or download the Bolty app.";
+const pageKeywords = "free estimation, car service quote, denting cost, painting price, free quote, bolty estimation";
 ---
 
-<MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<MasterLayout 
+  title={pageTitle} 
+  description={pageDescription}
+  keywords={pageKeywords}
+  schemaMarkup={{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bolty - Free Estimation",
+    "url": "https://bolty.in/get-free-estimation",
+    "telephone": "+91 9963017273",
+    "email": "support@bolty.in",
+    "priceRange": "$$",
+    "offers": {
+      "@type": "Offer",
+      "description": "Free car service estimation"
+    }
+  }}
+>
   <script>
     fbq('track', 'Lead');
   </script>

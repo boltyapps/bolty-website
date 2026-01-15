@@ -1,13 +1,13 @@
 ---
-title: "Car tyre stone removal tool"
-description: "Remove stones from your car tyre easily."
+title: "Car Tyre Stone Removal Tool - Extract Stones & Debris from Tire Treads"
+description: "Effective car tyre stone removal tool with ergonomic design. Removes stones and debris from tire treads easily. Extends tire lifespan and prevents tire damage."
 publishedDate: "Oct 14 2024"
 updatedDate: "Oct 14 2024"
 isFeatured: false
-tags: ['tyre', 'budget-friendly']  
+tags: ['tyre', 'budget-friendly', 'maintenance', 'stone removal', 'tire care', 'tools']
 heroImage:
     url: "/links/tyreremoval.jpg"
-    alt: "tyre removal"
+    alt: "Car tyre stone removal tool - removes stones and debris from tire treads"
 affiliateLink: "https://amzn.to/3BSfdP8"
 productCode: '1007'
 ---
