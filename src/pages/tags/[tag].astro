@@ -24,14 +24,21 @@ const { posts } = Astro.props;
 ---
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>Posts tagged with {tag}</h1>
-
-  <div>
+  <div class="container my-5"> 
+    <div class="row"> 
+      <div class="col-sm-12 col-md-10 mx-auto bg-white p-5"> 
+        <h1>Posts tagged with {tag}</h1>
+        <div>
     {
       posts.map((post) => (
         <PostHeader post={post} />
       ))
     }
   </div>
+        </div>
+        </div>
+        </div>
+
+  
 
 </MasterLayout>

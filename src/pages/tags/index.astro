@@ -9,14 +9,20 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 ---
 
 <MasterLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>Tags</h1>
-  <div>
-    {
-      tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>#{tag}</a>
-        </p>
-      ))
-    }
+  <div class="container my-5"> 
+    <div class="row"> 
+      <div class="col-sm-12 col-md-10 mx-auto bg-white p-5"> 
+        <h1>Tags</h1>
+        <div>
+          {
+            tags.map((tag) => (
+              <p class="tag">
+                <a href={`/tags/${tag}`}>#{tag}</a>
+              </p>
+            ))
+          }
+        </div>
+      </div>
+    </div>
   </div>
 </MasterLayout>
