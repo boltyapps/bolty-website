@@ -1,7 +1,7 @@
 ---
 import MasterLayout from "../../layouts/MasterLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
 const posts = await getCollection("blog");
 

@@ -3,7 +3,7 @@ title: "Why Choose Bolty - Best Car Denting & Painting Service"
 description: "Discover why Bolty is the best choice for car denting, painting and detailing services. AI-powered estimates, industry experts, 100% color match, convenient booking, and 2-year warranty."
 publishedDate: "Mar 25 2025"
 updatedDate: "Mar 25 2025"
-isFeatured: true
+isFeatured: false
 tags: ['bolty', 'car service', 'denting', 'painting', 'color matching', 'car repair', 'service benefits']  
 heroImage:
     url: ""
