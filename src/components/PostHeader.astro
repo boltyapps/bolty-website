@@ -5,10 +5,9 @@ import type { ImageMetadata } from 'astro';
 
 const { post } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,JPG,png,gif}')
-console.log(images);
 
 if (post.data.heroImage.url) {
-  if (!images[post.data.heroImage.url]) throw new Error(`"${post.data.heroImage.url}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+  if (!images[post.data.heroImage.url]) throw new Error(`"${post.data.heroImage.url}" does not exist in glob: "/src/assets/**/*.{jpeg,jpg,JPG,png,gif}"`);
 }
 ---
 
