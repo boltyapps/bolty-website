@@ -742,3 +742,13 @@ Run in verbose mode to see all warnings.
   [1mStack trace:[22m
 [2m    at eval (C:\Users\nandi\Documents\bolty-website\src\components\PostHeader.astro:10:47)
     [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[31m[1m18:32:35[22m [ERROR] [glob-loader][39m Failed to reload full-body-denting-and-painting-by-maruti-suzuki-brezza.mdx: **blog → full-body-denting-and-painting-by-maruti-suzuki-brezza** data does not match collection schema.
+
+  **title**: **title**: Required
+  **description**: **description**: Required
+  **publishedDate**: **publishedDate**: Expected type `"date"`, received `"object"`
+  **updatedDate**: **updatedDate**: Expected type `"date"`, received `"object"`
+  **heroImage**: **heroImage**: Required
+  **tags**: **tags**: Required
+  **isFeatured**: **isFeatured**: Required
+
