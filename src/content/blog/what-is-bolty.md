@@ -3,7 +3,7 @@ title: "What is Bolty - Denting, Painting and Detailing Service Platform"
 description: "Discover Bolty: An innovative online platform for hassle-free car denting, painting, and detailing services. Industry Experts, 100% color match guarantee, 2-year warranty."
 publishedDate: "Jan 1 2025"
 updatedDate: "Jan 1 2025"
-isFeatured: true
+isFeatured: false
 tags: ['bolty', 'car service', 'denting', 'painting', 'car repair', 'detailing']
 heroImage:
     url: ""

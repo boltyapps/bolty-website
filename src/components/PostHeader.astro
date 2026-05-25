@@ -1,12 +1,20 @@
 ---
-import DateFormatter from '../components/DateFormatter.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 const { post } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,JPG,png,gif}')
+
+if (post.data.heroImage.url) {
+  if (!images[post.data.heroImage.url]) throw new Error(`"${post.data.heroImage.url}" does not exist in glob: "/src/assets/**/*.{jpeg,jpg,JPG,png,gif}"`);
+}
 ---
 
-<article class="bg-white p-4 mb-3"> 
-  <DateFormatter date={post.data.updatedDate}></DateFormatter>
+<article class="bg-white py-4 mb-3"> 
+  {post.data.heroImage.url &&  <Image src={images[post.data.heroImage.url]()} alt={post.data.heroImage.alt} loading="lazy" decoding="async" class="img-fluid rounded mb-3" />}
+  <FormattedDate date={post.data.updatedDate}></FormattedDate>
   <h3 class="mb-0 mt-0">{post.data.title}</h3>
   <small>{post.data.description}</small> <br>
-  <a href={`/blog/${post.slug}/`}>Read Post</a>  
+  <a href={`/blog/${post.id}/`}>Read Post</a>  
 </article>

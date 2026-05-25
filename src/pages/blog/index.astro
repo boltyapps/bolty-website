@@ -1,33 +1,27 @@
 ---
 import MasterLayout from '../../layouts/MasterLayout.astro';
 import PostHeader from '../../components/PostHeader.astro';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
-
-const pageTitle = "Bolty Blog - Car Service Tips, Updates & Guides";
-const pageDescription = "Explore expert tips, service updates, announcements, and comprehensive guides on car denting, painting, detailing, and maintenance.";
-const pageKeywords = "car blog, denting tips, painting guide, car maintenance, car detailing, auto repair tips, bolty insights";
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
+	(a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
 );
 ---
 
 <MasterLayout 
-  title={pageTitle} 
-  description={pageDescription}
-  keywords={pageKeywords}
-  schemaMarkup={{
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": pageTitle,
-    "description": pageDescription,
-    "url": "https://bolty.in/blog"
-  }}
+  title="Bolty - Blog" 
+  description="Bolty is a showroom alternative for denting and painting. It's a website that allows you to create your own showroom and sell your handmade products."
 >
   <div class="container my-5"> 
     <div class="row"> 
       <div class="col-sm-12 col-md-10 mx-auto bg-white p-5"> 
-        <h1>Blog</h1>
+        <h1 class="text-center">Blog</h1>
         <div>
           {posts.map((post) => (
             <PostHeader post={post} />
@@ -37,4 +31,3 @@ const posts = (await getCollection('blog')).sort(
     </div>
   </div>
 </MasterLayout>
-

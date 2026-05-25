@@ -1,92 +1,112 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
+import { getCollection } from "astro:content";
+import PostHeader from "../components/PostHeader.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
-const pageTitle = "Bolty - Denting, Painting & Detailing Services | 100% Color Match";
-const pageDescription = "Get hassle-free car denting, painting and detailing services with 100% color match guarantee. Industry experts, premium paints, 2-year warranty. Book free estimation.";
-const pageKeywords = "car denting, car painting, auto detailing, car repair, color matching, dent removal, paint services, online car service, Hyderabad";
+const posts = (await getCollection("blog"))
+  .sort(
+    (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
+  )
+  .filter((post) => post.data.isFeatured === true);
 ---
 
-<MasterLayout 
-  title={pageTitle} 
-  description={pageDescription}
-  keywords={pageKeywords}
-  ogType="business.business"
-  schemaMarkup={{
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Bolty",
-    "description": pageDescription,
-    "url": "https://bolty.in",
-    "telephone": "+91 9963017273",
-    "email": "support@bolty.in",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "First floor, Vasista Bhavan, Near DLF gate 3, Gachibowli",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500032",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://instagram.com/bolty_app",
-      "https://wa.me/919963017273"
-    ],
-    "priceRange": "₹₹",
-    "areaServed": "Hyderabad"
-  }}
+<MasterLayout
+  title="Bolty - The showroom alternative for denting and painting."
+  description="Bolty is a showroom alternative for denting and painting. It's a website that allows you to create your own showroom and sell your handmade products."
 >
-  <div class="container" style="margin-top: 4rem; margin-bottom: 8rem;">
-    <div class="row">
-      <div class="col-md-8 mx-auto text-center">
-        <img src="img/bolty-f2.png" alt="bolty" width="512" class="img-fluid mt-3">
-        <h3 class="mt-3 display-6">
-          Worry free denting, painting and detailing services by industry experts with <u>100%</u> color match guarantee. 
-        </h3>
+  <div id="hero">
+    <div class="container" style="margin-top: 4rem; margin-bottom: 8rem;">
+      <div class="row">
+        <div class="col-md-10 mx-auto text-center">
+          <img
+            src="img/bolty-f2.png"
+            alt="bolty"
+            width="512"
+            class="img-fluid mt-3"
+          />
+          <h3 class="display-3">
+            The showroom alternative for denting and painting.
+          </h3>
+          <h3 class="mt-4">
+            Showroom-Level Finish. Without the Showroom Price.
+          </h3>
+          <p>100% color match guarantee.</p>
+          <div class="card my-4">
+            <div class="card-body bg-primary-subtle p-5">
+              <h5>Download Now</h5>
+              <a
+                href="https://play.google.com/store/apps/details?id=in.bolty"
+                target="_blank"
+                ><img
+                  src="/img/playstore.webp"
+                  alt="Play Store"
+                  height="40"
+                /></a
+              >
 
-        <div class="card my-4">
-          <div class="card-body bg-primary-subtle p-5">
-            <h5>Download Now</h5>
-             <a href="https://play.google.com/store/apps/details?id=in.bolty" target="_blank"><img src="/img/playstore.webp" alt="Play Store" height="40"></a> 
-             
-             <a href="https://apps.apple.com/in/app/bolty/id6756659984" target="_blank"><img src="/img/appstore.png" alt="App Store" height="40"></a>
-             
-             <div class="mt-3">
-              <a href="/blog/bolty-mobile-apps-anouncement/">Read the announcement</a>
-             </div>
+              <a
+                href="https://apps.apple.com/in/app/bolty/id6756659984"
+                target="_blank"
+                ><img src="/img/appstore.png" alt="App Store" height="40" /></a
+              >
+
+              <div class="mt-3">
+                <a href="/blog/bolty-mobile-apps-anouncement/"
+                  >Read the announcement</a
+                >
+              </div>
             </div>
-        </div>
-
-        <a href="/get-free-estimation" class="btn btn-secondary btn-lg mt-3">Get Free Estimation -></a>
-      </div>
-    </div>
-
-    <div class="row mt-5 pt-3">
-      <div class="col-sm-12 col-md-3 mb-3">
-        <div class="d-flex align-items-center">
-          <img src="img/accept.png" alt="accept" width="32" class="me-3">
-          <p class="mb-0">Choose your convenient time.</p>
+          </div>
+          <a href="/get-free-estimation" class="btn btn-secondary btn-lg mt-3"
+            >Get Free Estimation -></a
+          >
         </div>
       </div>
-      <div class="col-sm-12 col-md-3 mb-3">
-        <div class="d-flex align-items-center">
-          <img src="img/accept.png" alt="accept" width="32" class="me-3">
-          <p class="mb-0">Free Pick up & Drop facility.</p>
+      <div class="row mt-5 pt-3">
+        <div class="col-sm-12 col-md-3 mb-3">
+          <div class="d-flex align-items-center">
+            <img src="img/accept.png" alt="accept" width="32" class="me-3" />
+            <p class="mb-0">Choose your convenient time.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-3 mb-3">
-        <div class="d-flex align-items-center">
-          <img src="img/accept.png" alt="accept" width="32" class="me-3">
-          <p class="mb-0">Credit card and EMI options.</p>
+        <div class="col-sm-12 col-md-3 mb-3">
+          <div class="d-flex align-items-center">
+            <img src="img/accept.png" alt="accept" width="32" class="me-3" />
+            <p class="mb-0">Free Pick up & Drop facility.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-3 mb-3">
-        <div class="d-flex align-items-center">
-          <img src="img/accept.png" alt="accept" width="32" class="me-3">
-          <p class="mb-0">Get timely updates about serivce.</p>
+        <div class="col-sm-12 col-md-3 mb-3">
+          <div class="d-flex align-items-center">
+            <img src="img/accept.png" alt="accept" width="32" class="me-3" />
+            <p class="mb-0">Credit card and EMI options.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-3 mb-3">
+          <div class="d-flex align-items-center">
+            <img src="img/accept.png" alt="accept" width="32" class="me-3" />
+            <p class="mb-0">Get timely updates about serivce.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- full body services -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-sm-12 col-md-8 mx-auto">
+        <h2 class="text-center fw-bold mb-3">Some of our Makeovers</h2>
+        <div class="bg-white px-5">
+          {posts.map((post) => <PostHeader post={post} />)}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- full body services end -->
 
   <!-- Why bolty -->
 
@@ -100,39 +120,76 @@ const pageKeywords = "car denting, car painting, auto detailing, car repair, col
     <div class="row mt-3">
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="card card-body shadow p-5">
-          <img src="img/testimonies/jaideep.png" alt="jaideep" width="128">
+          <img src="img/testimonies/jaideep.png" alt="jaideep" width="128" />
           <div class="mt-3">
-            <p>"I came across Bolty in Instagram. I contacted them over WhatsApp and my experience was very good. They received me well. I have checked their previous works and gave my car for full body painting. The output was excellent. I recommend Bolty for all denting and painting services."</p>
+            <p>
+              "I came across Bolty in Instagram. I contacted them over WhatsApp
+              and my experience was very good. They received me well. I have
+              checked their previous works and gave my car for full body
+              painting. The output was excellent. I recommend Bolty for all
+              denting and painting services."
+            </p>
             <p class="mb-0">- Jaideep.</p>
             <small>Software Engineer.</small>
             <div>
-              <small><a href="https://www.instagram.com/reel/C9pMjSeSGVz/" target="_blank">Watch Testimony</a></small>
+              <small
+                ><a
+                  href="https://www.instagram.com/reel/C9pMjSeSGVz/"
+                  target="_blank">Watch Testimony</a
+                ></small
+              >
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="card card-body shadow p-5">
-          <img src="img/testimonies/surya-prakash.png" alt="suryaprakash" width="128">
+          <img
+            src="img/testimonies/surya-prakash.png"
+            alt="suryaprakash"
+            width="128"
+          />
           <div class="mt-3">
-            <p>"I have got excellent reponse from Bolty. The quality of service is very good. I am satisfied with service and Bolty team as well. I liked the response during the serivce. I am happy to associate with them. You can take services from Bolty without any hesitation."</p>
+            <p>
+              "I have got excellent reponse from Bolty. The quality of service
+              is very good. I am satisfied with service and Bolty team as well.
+              I liked the response during the serivce. I am happy to associate
+              with them. You can take services from Bolty without any
+              hesitation."
+            </p>
             <p class="mb-0">- Surya Prakash.</p>
             <small>Government Employee.</small>
             <div>
-              <small><a href="https://www.instagram.com/reel/C992MEBSZq4/" target="_blank">Watch Testimony</a></small>
+              <small
+                ><a
+                  href="https://www.instagram.com/reel/C992MEBSZq4/"
+                  target="_blank">Watch Testimony</a
+                ></small
+              >
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="card card-body shadow p-5">
-          <img src="img/testimonies/skhan.png" alt="khan" width="128">
+          <img src="img/testimonies/skhan.png" alt="khan" width="128" />
           <div class="mt-3">
-            <p>"I have checked almost 200 serives to get the service done. But no one has taken my car. I finally heard Bolty in Instagram. I concated them and they gave all the details perfectly. Each and every aspect of the service was updated to me. I got 100% color matching and the car was delivered in perfect condition."</p>
+            <p>
+              "I have checked almost 200 serives to get the service done. But no
+              one has taken my car. I finally heard Bolty in Instagram. I
+              concated them and they gave all the details perfectly. Each and
+              every aspect of the service was updated to me. I got 100% color
+              matching and the car was delivered in perfect condition."
+            </p>
             <p class="mb-0">- Shahzad Khan.</p>
             <small>Business Owner.</small>
             <div>
-              <small><a href="https://www.instagram.com/reel/C_VvnGzScFq/" target="_blank">Watch Testimony</a></small>
+              <small
+                ><a
+                  href="https://www.instagram.com/reel/C_VvnGzScFq/"
+                  target="_blank">Watch Testimony</a
+                ></small
+              >
             </div>
           </div>
         </div>
@@ -144,8 +201,11 @@ const pageKeywords = "car denting, car painting, auto detailing, car repair, col
     <div class="container">
       <div class="row">
         <div class="col">
-         <h3 class="display-1">Bolty experience has delighted our customers, leaving their cars with a stunning, like-new shine.</h3>
-        </div>  
+          <h3 class="display-1">
+            Bolty experience has delighted our customers, leaving their cars
+            with a stunning, like-new shine.
+          </h3>
+        </div>
       </div>
     </div>
   </div>
@@ -165,15 +225,27 @@ const pageKeywords = "car denting, car painting, auto detailing, car repair, col
         <div class="p-5">
           <div class="mb-5">
             <h3>Over a Decade of Expertise.</h3>
-            <p>With 10+ years in the industry, our seasoned professionals ensure top-notch quality and precision in every job. Your car is in expert hands.</p>
+            <p>
+              With 10+ years in the industry, our seasoned professionals ensure
+              top-notch quality and precision in every job. Your car is in
+              expert hands.
+            </p>
           </div>
           <div class="mb-5">
             <h3>Premium, Industry-Grade Paints.</h3>
-            <p>We use only the highest-quality, industry-approved paints to give your car a flawless, long-lasting finish that stands the test of time. Duxone and Würth are our go-to choice.</p>
+            <p>
+              We use only the highest-quality, industry-approved paints to give
+              your car a flawless, long-lasting finish that stands the test of
+              time. Duxone and Würth are our go-to choice.
+            </p>
           </div>
           <div>
             <h3>Perfect Color Match Guaranteed.</h3>
-            <p>We guarantee a seamless color match so precise that no one will ever notice a difference. Your car will look as good as new—every single time.</p>
+            <p>
+              We guarantee a seamless color match so precise that no one will
+              ever notice a difference. Your car will look as good as new—every
+              single time.
+            </p>
           </div>
         </div>
       </div>
@@ -191,35 +263,48 @@ const pageKeywords = "car denting, car painting, auto detailing, car repair, col
 
     <div class="row">
       <div class="col-sm-12 col-md-6 mx-auto my-5">
-        <img src="img/love.png" alt="Love" width="64">
+        <img src="img/love.png" alt="Love" width="64" />
         <h3 class="mt-3">Service with Love and Care</h3>
-        <p>We treat every car as if it were our own, ensuring top-quality workmanship with a personal touch. Our commitment to excellence means your vehicle gets the care and attention it truly deserves.</p>
+        <p>
+          We treat every car as if it were our own, ensuring top-quality
+          workmanship with a personal touch. Our commitment to excellence means
+          your vehicle gets the care and attention it truly deserves.
+        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 mx-auto my-5">
-        <img src="img/quality-control.png" alt="quality-check" width="64">
+        <img src="img/quality-control.png" alt="quality-check" width="64" />
         <h3 class="mt-3">Rigorous Checks for highest output</h3>
-        <p>We perform thorough inspections at every stage to ensure flawless results. Our strict quality control guarantees the highest level of precision and perfection for your car.</p>
+        <p>
+          We perform thorough inspections at every stage to ensure flawless
+          results. Our strict quality control guarantees the highest level of
+          precision and perfection for your car.
+        </p>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12 col-md-6 mx-auto my-5">
-        <img src="img/clean-car.png" alt="quality-check" width="64">
+        <img src="img/clean-car.png" alt="quality-check" width="64" />
         <h3 class="mt-3">Finishing Like Showroom Car</h3>
-        <p>We restore your car’s shine and perfection to match a brand-new showroom finish. With expert craftsmanship and premium materials, your vehicle will look as good as new.</p>
+        <p>
+          We restore your car’s shine and perfection to match a brand-new
+          showroom finish. With expert craftsmanship and premium materials, your
+          vehicle will look as good as new.
+        </p>
       </div>
     </div>
-
   </div>
 
   <div class="mt-5" style="background-color: #ff8d3140; padding: 5rem 0rem;">
     <div class="container">
       <div class="row">
         <div class="col text-center">
-         <h3 class="display-1">We also provide two years service warranty.</h3>
-         <h3 class="display-1">What are you waiting for?</h3>
-         <a href="/get-free-estimation" class="btn btn-secondary btn-lg mt-3">Get Free Estimation -></a>
+          <h3 class="display-1">We also provide two years service warranty.</h3>
+          <h3 class="display-1">What are you waiting for?</h3>
+          <a href="/get-free-estimation" class="btn btn-secondary btn-lg mt-3"
+            >Get Free Estimation -></a
+          >
         </div>
       </div>
     </div>
